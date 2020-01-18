@@ -1,5 +1,10 @@
 <template>
   <v-layout wrap>
+    <v-flex xs12 class="align-stretch">
+      <v-card-title class="display-1 mt-4 teal--text text--darken-2">
+        The list of side projects</v-card-title
+      >
+    </v-flex>
     <v-flex
       xs12
       sm6

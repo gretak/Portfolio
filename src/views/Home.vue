@@ -1,5 +1,9 @@
 <template>
   <div class="home">
+    <v-banner single-line>
+      We can't save your edits while you are in offline mode.
+      <p>test</p>
+    </v-banner>
     <CardsList />
   </div>
 </template>
