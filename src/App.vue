@@ -1,18 +1,47 @@
 <template>
   <v-app>
     <v-content>
-      <v-container fluid class="teal accent-6 white--text">
+      <v-container fluid class="grey darken-3 white--text">
         <v-row>
           <v-container>
-            <v-row>
+            <v-row align="center">
               <v-col cols="8">
                 <h1 class="title">
-                  Welcome to my portfolio site, it contains a list of current
+                  Hello, my name is Greta. You are now visiting my personal
+                  website, welcome! Here you can find a list of my current
                   projects and information about me.
                 </h1>
               </v-col>
-              <v-col cols="4">
-                will be icons here
+              <v-col cols="4" class="text-right">
+                <v-btn
+                  icon
+                  dark
+                  href="mailto:kavaliauskaite3@gmail.com"
+                  target="_blank"
+                  color="teal lighten-4"
+                >
+                  <v-icon dark x-large>email</v-icon>
+                </v-btn>
+                <v-btn
+                  icon
+                  dark
+                  href="tel:+447402245731"
+                  target="_blank"
+                  class="ma-4"
+                  color="teal lighten-4"
+                >
+                  <v-icon dark x-large>phone_enabled</v-icon>
+                </v-btn>
+
+                <v-btn
+                  icon
+                  dark
+                  href="https://www.linkedin.com/pub/greta-kavaliauskaite/6a/6a6/2b1"
+                  target="_blank"
+                  color="teal lighten-4"
+                >
+                  <v-icon x-large>fab fa-linkedin</v-icon>
+                </v-btn>
               </v-col>
             </v-row>
           </v-container>
@@ -28,9 +57,9 @@
         </v-img>
       </v-container>
 
-      <v-container fluid class="teal lighten-2 white--text">
+      <v-container fluid class="teal lighten-4 white--text mb-10">
         <v-row>
-          <v-container class="teal lighten-2 mt-n12" style="z-index:1">
+          <v-container class="teal lighten-2 mt-n12 mb-n12" style="z-index:1">
             <v-col cols="12" class="pt-5">
               <div class="title	 white--text">
                 <p>About me:</p>
@@ -68,11 +97,92 @@
         <v-row>
           <CardsList />
         </v-row>
-        <row>
-          <v-banner class="teal accent-5 white--text pa-3 mb-10 mt-10">
-            Contact me
-          </v-banner>
-        </row>
+
+        <v-row>
+          <v-flex xs12 class="align-stretch">
+            <v-card-title class="display-1 mt-6 teal--text text--darken-2">
+              Check these links</v-card-title
+            >
+          </v-flex>
+          <v-col cols="12" class="teal accent-5 white--text pa-5 mb-12 mt-6">
+            <v-btn
+              x-large
+              class="ma-4 teal--text"
+              color="white"
+              href="project.viewProjectUrl"
+            >
+              CV
+            </v-btn>
+            <v-btn x-large class="ma-4 teal--text" color="white" href="/cv.pdf">
+              GitHub
+            </v-btn>
+            <v-btn
+              x-large
+              class="ma-4 teal--text"
+              color="white"
+              href="https://www.codewars.com/users/gretak"
+            >
+              Code wars
+            </v-btn>
+            <v-btn
+              x-large
+              class="ma-4 teal--text"
+              color="white"
+              href="https://www.artgallery.co.uk/artist/greta_kavaliauskaite"
+            >
+              Art gallery
+            </v-btn>
+            <v-btn
+              x-large
+              class="ma-4 teal--text"
+              color="white"
+              href="https://www.youtube.com/watch?v=CA01cA2c7eA"
+            >
+              Youtube
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
+      <v-container fluid class="pa-0 mt-5">
+        <v-footer class="grey darken-3 text-center white--text ma-0">
+          <v-col cols="12">
+            <v-btn
+              icon
+              dark
+              href="mailto:kavaliauskaite3@gmail.com"
+              target="_blank"
+              color="teal lighten-4"
+            >
+              <v-icon dark large>email</v-icon>
+            </v-btn>
+            <v-btn
+              icon
+              dark
+              href="tel:+447402245731"
+              target="_blank"
+              class="ma-3"
+              color="teal lighten-4"
+            >
+              <v-icon dark large>phone_enabled</v-icon>
+            </v-btn>
+
+            <v-btn
+              icon
+              dark
+              href="https://www.linkedin.com/pub/greta-kavaliauskaite/6a/6a6/2b1"
+              target="_blank"
+              color="teal lighten-4"
+            >
+              <v-icon large>fab fa-linkedin</v-icon>
+            </v-btn>
+          </v-col>
+
+          <v-col cols="12" class="pt-0">
+            <div class="title">
+              Greta Kavaliauskaite &copy; {{ new Date().getFullYear() }}
+            </div>
+          </v-col>
+        </v-footer>
       </v-container>
     </v-content>
   </v-app>
