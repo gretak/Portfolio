@@ -1,7 +1,7 @@
 <template>
   <v-layout wrap>
     <v-flex xs12 class="align-stretch">
-      <v-card-title class="display-1 mt-4 teal--text text--darken-2">
+      <v-card-title class="headline mt-4 teal--text text--darken-2">
         A few side projects</v-card-title
       >
     </v-flex>
@@ -10,16 +10,16 @@
       sm6
       v-for="project in projects"
       :key="project.id"
-      class="d-flex align-stretch pa-5 pa-sm-10"
+      class="d-flex align-stretch pa-5 pa-sm-10 pt-sm-5"
     >
-      <v-card class="pa-5">
+      <v-card class="pa-4">
         <v-img
           class="white--text align-end"
           height="370"
           :src="project.imagepath"
         >
         </v-img>
-        <v-card-title class="display-1 mb-4 mt-4 teal--text text--darken-2">{{
+        <v-card-title class="headline mb-4 mt-4 teal--text text--darken-2">{{
           project.title
         }}</v-card-title>
 
@@ -39,8 +39,8 @@
         <v-divider></v-divider>
 
         <v-btn
-          large
-          class="ma-4 mb-0 white--text"
+          medium
+          class="ma-2 mb-0 white--text"
           color="teal accent-4"
           :href="project.viewProjectUrl"
         >
@@ -48,24 +48,24 @@
         </v-btn>
 
         <v-btn
-          large
-          class="ma-4 mb-0 white--text"
+          medium
+          class="ma-2 mb-0 white--text"
           color="teal accent-4"
           :href="project.checkRepositoryUrl"
-          >check git repository
+          >check git repo
         </v-btn>
       </v-card>
     </v-flex>
 
     <v-flex xs12 sm6 class="d-flex align-stretch pa-5 pa-sm-10">
-      <v-card class="pa-5">
+      <v-card class="pa-4">
         <iframe
           width="100%"
           height="600"
           src="https://gretak.github.io/react-slider/"
         ></iframe>
 
-        <v-card-title class="display-1 mb-4 mt-4 teal--text text--darken-2">
+        <v-card-title class="headline mb-4 mt-4 teal--text text--darken-2">
           "One day" slider
         </v-card-title>
 
@@ -84,8 +84,8 @@
         <v-divider></v-divider>
 
         <v-btn
-          large
-          class="ma-4 mb-0 white--text"
+          medium
+          class="ma-2 mb-0 white--text"
           color="teal accent-4"
           href="https://gretak.github.io/react-slider/"
         >
@@ -93,11 +93,11 @@
         </v-btn>
 
         <v-btn
-          large
-          class="ma-4 mb-0 white--text"
+          medium
+          class="ma-2 mb-0 white--text"
           color="teal accent-4"
           href="https://github.com/gretak/react-slider"
-          >check git repository
+          >check git repo
         </v-btn>
       </v-card>
     </v-flex>
@@ -163,7 +163,8 @@ export default {
         {
           id: 4,
           title: "React puzzle",
-          description: "Responsive Puzzle Game",
+          description:
+            "Responsive Puzzle Game. Has 3 levels, need to make an image by clicking on the squares.",
           listOflanguages: ["HTML", "CSS", "JS", "REACT", "WEBPACK", "SASS"],
           viewProjectUrl: "https://gretak.herokuapp.com/puzzle/",
           checkRepositoryUrl: "https://github.com/gretak/react-slider",

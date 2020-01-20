@@ -1,18 +1,18 @@
 <template>
   <v-app>
     <v-content>
-      <v-container fluid class="grey darken-3 white--text">
+      <v-container fluid class="grey darken-3 white--text pa-0">
         <v-row>
           <v-container>
             <v-row align="center">
-              <v-col cols="8">
-                <h1 class="title">
+              <v-col cols="12" sm="8">
+                <p class="pb-0">
                   Hello, my name is Greta. You are now visiting my personal
                   website, welcome! Here you can find a list of my current
                   projects and information about me.
-                </h1>
+                </p>
               </v-col>
-              <v-col cols="4" class="text-right">
+              <v-col cols="12" sm="4" class="text-right">
                 <v-btn
                   icon
                   dark
@@ -20,7 +20,7 @@
                   target="_blank"
                   color="teal lighten-4"
                 >
-                  <v-icon dark x-large>email</v-icon>
+                  <v-icon dark large>email</v-icon>
                 </v-btn>
                 <v-btn
                   icon
@@ -30,7 +30,7 @@
                   class="ma-4"
                   color="teal lighten-4"
                 >
-                  <v-icon dark x-large>phone_enabled</v-icon>
+                  <v-icon dark large>phone_enabled</v-icon>
                 </v-btn>
 
                 <v-btn
@@ -40,7 +40,7 @@
                   target="_blank"
                   color="teal lighten-4"
                 >
-                  <v-icon x-large>fab fa-linkedin</v-icon>
+                  <v-icon large>fab fa-linkedin</v-icon>
                 </v-btn>
               </v-col>
             </v-row>
@@ -61,7 +61,7 @@
         <v-row>
           <v-container class="teal lighten-2 mt-n12 mb-n12" style="z-index:1">
             <v-col cols="12" class="pt-5">
-              <div class="title	 white--text">
+              <div class="white--text">
                 <p>About me:</p>
                 <ul>
                   <li>I will go for an easy, but robust solution.</li>
@@ -99,42 +99,49 @@
         </v-row>
 
         <v-row>
-          <v-flex xs12 class="align-stretch">
-            <v-card-title class="display-1 mt-6 teal--text text--darken-2">
+          <v-flex xs12>
+            <v-card-title class="headline mt-6 teal--text text--darken-2">
               Check these links</v-card-title
             >
           </v-flex>
-          <v-col cols="12" class="teal accent-5 white--text pa-5 mb-12 mt-6">
+
+          <v-col cols="12" class="teal accent-5 white--text pa-3 mb-5 mt-3">
             <v-btn
-              x-large
-              class="ma-4 teal--text"
+              medium
+              class="ma-3 teal--text"
               color="white"
-              href="project.viewProjectUrl"
+              href="./static/cv.pdf"
             >
               CV
             </v-btn>
-            <v-btn x-large class="ma-4 teal--text" color="white" href="/cv.pdf">
+
+            <v-btn
+              medium
+              class="ma-3 teal--text"
+              color="white"
+              href="https://github.com/gretak"
+            >
               GitHub
             </v-btn>
             <v-btn
-              x-large
-              class="ma-4 teal--text"
+              medium
+              class="ma-3 teal--text"
               color="white"
               href="https://www.codewars.com/users/gretak"
             >
               Code wars
             </v-btn>
             <v-btn
-              x-large
-              class="ma-4 teal--text"
+              medium
+              class="ma-3 teal--text"
               color="white"
               href="https://www.artgallery.co.uk/artist/greta_kavaliauskaite"
             >
               Art gallery
             </v-btn>
             <v-btn
-              x-large
-              class="ma-4 teal--text"
+              medium
+              class="ma-3 teal--text"
               color="white"
               href="https://www.youtube.com/watch?v=CA01cA2c7eA"
             >
@@ -153,17 +160,16 @@
               target="_blank"
               color="teal lighten-4"
             >
-              <v-icon dark large>email</v-icon>
+              <v-icon dark medium>email</v-icon>
             </v-btn>
             <v-btn
               icon
               dark
               href="tel:+447402245731"
               target="_blank"
-              class="ma-3"
               color="teal lighten-4"
             >
-              <v-icon dark large>phone_enabled</v-icon>
+              <v-icon dark medium>phone_enabled</v-icon>
             </v-btn>
 
             <v-btn
@@ -173,12 +179,12 @@
               target="_blank"
               color="teal lighten-4"
             >
-              <v-icon large>fab fa-linkedin</v-icon>
+              <v-icon dark medium>fab fa-linkedin</v-icon>
             </v-btn>
           </v-col>
 
           <v-col cols="12" class="pt-0">
-            <div class="title">
+            <div>
               Greta Kavaliauskaite &copy; {{ new Date().getFullYear() }}
             </div>
           </v-col>
@@ -190,12 +196,14 @@
 
 <script>
 import CardsList from "./components/CardsList";
+//import pdf from "vue-pdf";
 
 export default {
   name: "App",
 
   components: {
     CardsList
+    //pdf
   },
 
   data: () => ({
