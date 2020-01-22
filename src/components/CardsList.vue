@@ -58,11 +58,11 @@
         </v-card>
       </v-flex>
 
-      <v-flex xs12 sm6 class="d-flex align-stretch pa-5 pa-sm-10">
+      <v-flex xs12 sm6 class="d-flex align-stretch pa-5 pa-sm-10 pt-sm-5">
         <v-card class="pa-4">
           <iframe
             width="100%"
-            height="600"
+            height="550"
             src="https://gretak.github.io/react-slider/"
           ></iframe>
 
@@ -71,13 +71,13 @@
           </v-card-title>
 
           <v-card-subtitle class="subtitle-1 black--text">
-            React paralax responsive slider
+            Resposive paralax slider made with React JS. The idea was to use it
+            for presentations.
           </v-card-subtitle>
 
           <v-card-text class="text--primary">
-            <code class="mr-4 mb-4 pa-1 subtitle-2">CSS</code>
             <code class="mr-4 mb-4 pa-1 subtitle-2">REACT</code>
-            <code class="mr-4 mb-4 pa-1 subtitle-2">EACT spring</code>
+            <code class="mr-4 mb-4 pa-1 subtitle-2">REACT spring</code>
             <code class="mr-4 mb-4 pa-1 subtitle-2">WEBPACK</code>
             <code class="mr-4 mb-4 pa-1 subtitle-2">HTML</code>
             <code class="mr-4 mb-4 pa-1 subtitle-2">SASS</code>
@@ -171,6 +171,27 @@ export default {
           viewProjectUrl: "https://gretak.herokuapp.com/puzzle/",
           checkRepositoryUrl: "https://github.com/gretak/react-slider",
           imagepath: require("../assets/project-puzzle.png")
+        },
+        {
+          id: 5,
+          title: "Portfolio website",
+          description:
+            "I wanted to create a new website for my side projects. This was a great chance to try vue animations and Vuetify.",
+          listOflanguages: [
+            "VUE",
+            "VUETIFY",
+            "ANIMATING VUE",
+            "VUE ROUTER",
+            "AXIOS DOWNLOAD",
+            "VUETIFY",
+            "MATERIAL DESIGN/ICONS",
+            "HTML",
+            "CSS",
+            "JS"
+          ],
+          viewProjectUrl: "/",
+          checkRepositoryUrl: "https://github.com/gretak/portfolio",
+          imagepath: require("../assets/portfolio.png")
         }
       ]
     };
