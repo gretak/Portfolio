@@ -12,37 +12,40 @@
                   projects and information about me.
                 </p>
               </v-col>
-              <v-col cols="12" sm="4" class="text-right">
-                <v-btn
-                  icon
-                  dark
-                  href="mailto:kavaliauskaite3@gmail.com"
-                  target="_blank"
-                  color="teal lighten-4"
-                >
-                  <v-icon dark large>email</v-icon>
-                </v-btn>
-                <v-btn
-                  icon
-                  dark
-                  href="tel:+447402245731"
-                  target="_blank"
-                  class="ma-4"
-                  color="teal lighten-4"
-                >
-                  <v-icon dark large>phone_enabled</v-icon>
-                </v-btn>
+              <transition name="fade" appear>
+                <v-col cols="12" sm="4" class="text-right">
+                  <v-btn
+                    icon
+                    dark
+                    href="mailto:kavaliauskaite3@gmail.com"
+                    target="_blank"
+                    color="teal lighten-4"
+                  >
+                    <v-icon dark large>email</v-icon>
+                  </v-btn>
 
-                <v-btn
-                  icon
-                  dark
-                  href="https://www.linkedin.com/pub/greta-kavaliauskaite/6a/6a6/2b1"
-                  target="_blank"
-                  color="teal lighten-4"
-                >
-                  <v-icon large>fab fa-linkedin</v-icon>
-                </v-btn>
-              </v-col>
+                  <v-btn
+                    icon
+                    dark
+                    href="tel:+447402245731"
+                    target="_blank"
+                    class="ma-4"
+                    color="teal lighten-4"
+                  >
+                    <v-icon dark large>phone_enabled</v-icon>
+                  </v-btn>
+
+                  <v-btn
+                    icon
+                    dark
+                    href="https://www.linkedin.com/pub/greta-kavaliauskaite/6a/6a6/2b1"
+                    target="_blank"
+                    color="teal lighten-4"
+                  >
+                    <v-icon large>fab fa-linkedin</v-icon>
+                  </v-btn>
+                </v-col>
+              </transition>
             </v-row>
           </v-container>
         </v-row>
@@ -59,33 +62,36 @@
 
       <v-container fluid class="teal lighten-4 white--text mb-10">
         <v-row>
-          <v-container class="teal lighten-2 mt-n12 mb-n12" style="z-index:1">
-            <v-col cols="12" class="pt-5">
-              <div class="white--text">
-                <p>About me:</p>
-                <ul>
-                  <li>I will go for an easy, but robust solution.</li>
-                  <li>
-                    I have a degree in project management, I believe a good PM
-                    should be technical.
-                  </li>
-                  <li>I am not a coding ninja, I am just working hard.</li>
-                  <li>I am good with teaching/helping others.</li>
-                  <li>I am empathic and easy to communicate with.</li>
-                  <li>
-                    I am respectful and treat people fairly, I am never unfair.
-                  </li>
-                </ul>
-                <p class="pt-5">
-                  I am enjoying my job if I learn, help and get recognised for
-                  my hard work. I believe I have comprehensive skills and always
-                  like to challenge myself, it is the only way of learning. I am
-                  looking for a job where I am not looking forward to a weekend,
-                  I enjoy everyday.
-                </p>
-              </div>
-            </v-col>
-          </v-container>
+          <transition name="slide-up" appear>
+            <v-container class="teal lighten-2 mt-n12 mb-n12" style="z-index:1">
+              <v-col cols="12" class="pt-5">
+                <div class="white--text">
+                  <p>About me:</p>
+                  <ul>
+                    <li>I will go for an easy, but robust solution.</li>
+                    <li>
+                      I have a degree in project management, I believe a good PM
+                      should be technical.
+                    </li>
+                    <li>I am not a coding ninja, I am just working hard.</li>
+                    <li>I am good with teaching/helping others.</li>
+                    <li>I am empathic and easy to communicate with.</li>
+                    <li>
+                      I am respectful and treat people fairly, I am never
+                      unfair.
+                    </li>
+                  </ul>
+                  <p class="pt-5">
+                    I am enjoying my job if I learn, help and get recognised for
+                    my hard work. I believe I have comprehensive skills and
+                    always like to challenge myself, it is the only way of
+                    learning. I am looking for a job where I am not looking
+                    forward to a weekend, I enjoy everyday.
+                  </p>
+                </div>
+              </v-col>
+            </v-container>
+          </transition>
         </v-row>
       </v-container>
       <v-container>
@@ -222,3 +228,26 @@ export default {
   }
 };
 </script>
+
+<style>
+.slide-up-enter {
+  transform: translateY(100px);
+}
+
+.slide-up-enter-active {
+  transition: all 1.5s ease;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease-out;
+}
+</style>
