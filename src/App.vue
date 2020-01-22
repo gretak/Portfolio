@@ -75,16 +75,11 @@
                   <li>
                     I am respectful and treat people fairly, I am never unfair.
                   </li>
-                  <li>
-                    Sometimes I can not sleep till ~2 am and I can gather so
-                    many cool ideas/projects I will start the next day. <br />I
-                    forget them in the morning.
-                  </li>
                 </ul>
                 <p class="pt-5">
                   I am enjoying my job if I learn, help and get recognised for
-                  my hard work. I believe I have multiple skills and always like
-                  to challenge myself, it is the only way of learning. I am
+                  my hard work. I believe I have comprehensive skills and always
+                  like to challenge myself, it is the only way of learning. I am
                   looking for a job where I am not looking forward to a weekend,
                   I enjoy everyday.
                 </p>
