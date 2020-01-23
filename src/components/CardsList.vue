@@ -58,7 +58,12 @@
         </v-card>
       </v-flex>
 
-      <v-flex xs12 sm6 class="d-flex align-stretch pa-5 pa-sm-10 pt-sm-5">
+      <v-flex
+        xs12
+        sm6
+        class="d-flex align-stretch pa-5 pa-sm-10 pt-sm-5"
+        :key="6"
+      >
         <v-card class="pa-4">
           <iframe
             width="100%"
@@ -109,9 +114,7 @@
 <script>
 export default {
   name: "CardsList",
-  props: {
-    msg: String
-  },
+
   data() {
     return {
       projects: [
@@ -179,7 +182,6 @@ export default {
             "I wanted to create a new website for my side projects. This was a great chance to try vue animations and Vuetify.",
           listOflanguages: [
             "VUE",
-            "VUETIFY",
             "ANIMATING VUE",
             "VUE ROUTER",
             "AXIOS DOWNLOAD",

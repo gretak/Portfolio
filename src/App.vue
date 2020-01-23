@@ -3,16 +3,16 @@
     <v-content>
       <v-container fluid class="grey darken-3 white--text pa-0">
         <v-row>
-          <v-container>
-            <v-row align="center">
-              <v-col cols="12" sm="8">
-                <p class="pb-0">
-                  Hello, my name is Greta. You are now visiting my personal
-                  website, welcome! Here you can find a list of my current
-                  projects and information about me.
-                </p>
-              </v-col>
-              <transition name="fade" appear>
+          <transition name="slide-down" appear>
+            <v-container>
+              <v-row align="center">
+                <v-col cols="12" sm="8">
+                  <p class="pb-0">
+                    Hello, my name is Greta. You are now visiting my personal
+                    website, welcome! Here you can find a list of my current
+                    projects and information about me.
+                  </p>
+                </v-col>
                 <v-col cols="12" sm="4" class="text-right">
                   <v-btn
                     icon
@@ -45,9 +45,9 @@
                     <v-icon large>fab fa-linkedin</v-icon>
                   </v-btn>
                 </v-col>
-              </transition>
-            </v-row>
-          </v-container>
+              </v-row>
+            </v-container>
+          </transition>
         </v-row>
       </v-container>
       <v-container fluid class="teal accent-5 white--text pa-0">
@@ -205,11 +205,6 @@ export default {
   components: {
     CardsList
   },
-
-  data: () => ({
-    //
-  }),
-
   methods: {
     downloadItem(fileName) {
       axios({
@@ -234,20 +229,12 @@ export default {
   transform: translateY(100px);
 }
 
-.slide-up-enter-active {
+.slide-up-enter-active,
+.slide-down-enter-active {
   transition: all 1.5s ease;
 }
 
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-leave-to {
-  opacity: 0;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 1s ease-out;
+.slide-down-enter {
+  transform: translateY(-50px);
 }
 </style>
