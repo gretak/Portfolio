@@ -194,6 +194,27 @@ export default {
           viewProjectUrl: "/",
           checkRepositoryUrl: "https://github.com/gretak/portfolio",
           imagepath: require("../assets/portfolio.png")
+        },
+        {
+          id: 6,
+          title: "Project in progress",
+          description:
+            "I wanted to use vue forms and authentication. This project is in progress, will upload the MVP once available.",
+          listOflanguages: [
+            "VUE",
+            "VUE FORMS",
+            "BASIC AUTH",
+            "VUE ROUTER",
+            "AXIOS",
+            "VUETIFY",
+            "MATERIAL DESIGN/ICONS",
+            "HTML",
+            "CSS",
+            "JS"
+          ],
+          viewProjectUrl: "/",
+          checkRepositoryUrl: "https://github.com/gretak/portfolio",
+          imagepath: require("../assets/contact-form.png")
         }
       ]
     };
