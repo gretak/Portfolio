@@ -94,7 +94,17 @@
           </transition>
         </v-row>
       </v-container>
+
       <v-container>
+          
+        <v-row class="mt-4">
+          <p class="codepen" data-height="500" data-theme-id="light" data-default-tab="js,result" data-user="gretakavaliauskaite" data-slug-hash="zYKPMOe" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CAT quiz">
+  <span>See the Pen <a href="https://codepen.io/gretakavaliauskaite/pen/zYKPMOe">
+  CAT quiz</a> by greta kavaliauskaite (<a href="https://codepen.io/gretakavaliauskaite">@gretakavaliauskaite</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span></p>
+
+        </v-row>
+
         <v-row>
           <CardsList />
         </v-row>
@@ -196,11 +206,11 @@
 </template>
 
 <script>
-import CardsList from "./components/CardsList";
-import axios from "axios";
+import CardsList from './components/CardsList';
+import axios from 'axios';
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {
     CardsList
@@ -209,13 +219,13 @@ export default {
     downloadItem(fileName) {
       axios({
         url: fileName,
-        method: "GET",
-        responseType: "blob" // important
+        method: 'GET',
+        responseType: 'blob' // important
       }).then(response => {
         const url = window.URL.createObjectURL(new Blob([response.data]));
-        const link = document.createElement("a");
+        const link = document.createElement('a');
         link.href = url;
-        link.setAttribute("download", fileName);
+        link.setAttribute('download', fileName);
         document.body.appendChild(link);
         link.click();
       });
@@ -236,5 +246,22 @@ export default {
 
 .slide-down-enter {
   transform: translateY(-50px);
+}
+
+.hide {
+  display: none;
+}
+
+#quiz-intro,
+#quiz-content {
+  border: 1px solid green;
+}
+
+.br-5 {
+  border-radius: 5px;
+}
+
+#quiz p {
+  color: white;
 }
 </style>
